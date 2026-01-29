@@ -24,12 +24,12 @@ export default function Home() {
       <section className="py-16 bg-gradient-to-b from-white to-rose-50/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
           <span className="inline-block px-4 py-2 rounded-full bg-rose-50 text-rose-600 text-sm font-medium mb-4">
-            Depoimentos
+            Testimonials
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            O Que Nossos{' '}
+            What Our{' '}
             <span className="bg-gradient-to-r from-rose-500 to-purple-500 bg-clip-text text-transparent">
-              Clientes Dizem
+              Customers Say
             </span>
           </h2>
         </div>

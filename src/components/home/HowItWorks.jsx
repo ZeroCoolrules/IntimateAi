@@ -5,26 +5,26 @@ import { MessageSquare, Sparkles, Package, Heart } from 'lucide-react';
 const steps = [
   {
     icon: MessageSquare,
-    title: "Converse com a IA",
-    description: "Responda perguntas simples e privadas sobre suas preferências e nível de conforto.",
+    title: "Chat with AI",
+    description: "Answer simple, private questions about your preferences and comfort level.",
     color: "from-rose-400 to-pink-500"
   },
   {
     icon: Sparkles,
-    title: "Receba Recomendações",
-    description: "Nossa IA analisa suas respostas e sugere produtos perfeitos para você.",
+    title: "Get Recommendations",
+    description: "Our AI analyzes your answers and suggests perfect products for you.",
     color: "from-pink-400 to-purple-500"
   },
   {
     icon: Package,
-    title: "Entrega Discreta",
-    description: "Seus produtos chegam em embalagem neutra, sem nenhuma identificação.",
+    title: "Discreet Delivery",
+    description: "Your products arrive in neutral packaging, with no identification.",
     color: "from-purple-400 to-indigo-500"
   },
   {
     icon: Heart,
-    title: "Aproveite",
-    description: "Descubra novas dimensões de prazer e bem-estar com total segurança.",
+    title: "Enjoy",
+    description: "Discover new dimensions of pleasure and wellness with total safety.",
     color: "from-indigo-400 to-rose-500"
   }
 ];
@@ -40,16 +40,16 @@ export default function HowItWorks() {
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-2 rounded-full bg-rose-50 text-rose-600 text-sm font-medium mb-4">
-            Como Funciona
+            How It Works
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Sua Jornada de{' '}
+            Your Journey of{' '}
             <span className="bg-gradient-to-r from-rose-500 to-purple-500 bg-clip-text text-transparent">
-              Descoberta
+              Discovery
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Em apenas 4 passos simples, você encontra produtos perfeitos para suas necessidades
+            In just 4 simple steps, you find perfect products for your needs
           </p>
         </motion.div>
 

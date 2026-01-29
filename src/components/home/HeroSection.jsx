@@ -80,23 +80,22 @@ export default function HeroSection() {
               <Link to={createPageUrl('AIAssistant')}>
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  className="w-full sm:w-auto bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white px-8 py-6 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                 >
                   <Bot className="w-5 h-5 mr-2" />
-                  Encontre o Ideal Para Você
+                  Find What's Right For You
                   <ArrowRight className={`w-5 h-5 ml-2 transition-transform duration-300 ${isHovered ? 'translate-x-1' : ''}`} />
                 </Button>
               </Link>
               <Link to={createPageUrl('Shop')}>
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="w-full sm:w-auto border-2 border-rose-200 text-rose-600 hover:bg-rose-50 px-8 py-6 text-lg rounded-full transition-all duration-300"
+                  className="w-full sm:w-auto bg-rose-100/60 hover:bg-rose-200/60 text-rose-700 font-semibold px-8 py-6 text-lg rounded-full transition-all duration-300 border-0"
                 >
                   <ShieldCheck className="w-5 h-5 mr-2" />
-                  Compre Discretamente
+                  Shop Discreetly
                 </Button>
               </Link>
             </motion.div>
@@ -109,9 +108,9 @@ export default function HeroSection() {
               className="flex flex-wrap gap-6 mt-10 justify-center lg:justify-start"
             >
               {[
-                { icon: ShieldCheck, text: "100% Discreto" },
-                { icon: Heart, text: "Produtos Premium" },
-                { icon: Sparkles, text: "IA Personalizada" }
+                { icon: ShieldCheck, text: "100% Discreet" },
+                { icon: Heart, text: "Premium Products" },
+                { icon: Sparkles, text: "AI Personalized" }
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-2 text-gray-600">
                   <item.icon className="w-5 h-5 text-rose-500" />
@@ -130,8 +129,8 @@ export default function HeroSection() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&h=1000&fit=crop"
-                alt="Bem-estar íntimo"
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bbb6a77b3a2dc011c4f24/afe7bbec9_pexels-shvetsa-5187355.jpg"
+                alt="Intimate wellness"
                 className="w-full h-[500px] lg:h-[600px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
@@ -148,8 +147,8 @@ export default function HeroSection() {
                     <Bot className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Assistente IntimacyAI</h3>
-                    <p className="text-sm text-gray-500">Recomendações personalizadas com IA</p>
+                    <h3 className="font-semibold text-gray-900">IntimacyAI Assistant</h3>
+                    <p className="text-sm text-gray-500">AI-powered personalized recommendations</p>
                   </div>
                 </div>
               </motion.div>

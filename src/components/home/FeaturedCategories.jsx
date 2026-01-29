@@ -7,29 +7,29 @@ import { ArrowRight } from 'lucide-react';
 const categories = [
   {
     name: "Solo",
-    description: "Prazer individual e autoconhecimento",
-    image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&h=800&fit=crop",
+    description: "Individual pleasure & self-discovery",
+    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bbb6a77b3a2dc011c4f24/a21f4e667_pexels-shvetsa-5187376.jpg",
     color: "from-rose-500 to-pink-600",
     slug: "solo"
   },
   {
-    name: "Casais",
-    description: "Experiências para dois",
-    image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600&h=800&fit=crop",
+    name: "Couples",
+    description: "Shared experiences for two",
+    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bbb6a77b3a2dc011c4f24/da8c1197c_pexels-shvetsa-5187503.jpg",
     color: "from-pink-500 to-purple-600",
     slug: "couples"
   },
   {
-    name: "Bem-estar",
-    description: "Saúde íntima e cuidados",
-    image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&h=800&fit=crop",
+    name: "Wellness",
+    description: "Intimate health & care",
+    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bbb6a77b3a2dc011c4f24/6db9d1a95_pexels-shvetsa-5187656.jpg",
     color: "from-purple-500 to-indigo-600",
     slug: "wellness"
   },
   {
-    name: "Massagem",
-    description: "Óleos e acessórios sensuais",
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&h=800&fit=crop",
+    name: "Massage",
+    description: "Sensual oils & accessories",
+    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bbb6a77b3a2dc011c4f24/810c46402_pexels-shvetsa-5187488.jpg",
     color: "from-indigo-500 to-rose-600",
     slug: "massage"
   }
@@ -46,12 +46,12 @@ export default function FeaturedCategories() {
           className="text-center mb-12"
         >
           <span className="inline-block px-4 py-2 rounded-full bg-rose-50 text-rose-600 text-sm font-medium mb-4">
-            Categorias
+            Categories
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Explore Nossas{' '}
+            Explore Our{' '}
             <span className="bg-gradient-to-r from-rose-500 to-purple-500 bg-clip-text text-transparent">
-              Coleções
+              Collections
             </span>
           </h2>
         </motion.div>
@@ -83,7 +83,7 @@ export default function FeaturedCategories() {
                       <h3 className="text-2xl font-bold mb-2">{category.name}</h3>
                       <p className="text-white/80 text-sm mb-4">{category.description}</p>
                       <div className="flex items-center gap-2 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        Explorar
+                        Explore
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </motion.div>

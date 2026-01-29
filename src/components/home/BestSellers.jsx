@@ -8,41 +8,41 @@ import { Button } from '@/components/ui/button';
 const bestSellers = [
   {
     id: 1,
-    name: "Vibrador Premium Silicone",
+    name: "Premium Silicone Vibrator",
     price: 299.90,
     originalPrice: 399.90,
     rating: 4.9,
     reviews: 234,
-    image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=500&fit=crop",
-    tag: "Mais Vendido"
+    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bbb6a77b3a2dc011c4f24/afe7bbec9_pexels-shvetsa-5187355.jpg",
+    tag: "Best Seller"
   },
   {
     id: 2,
-    name: "Kit Massagem Sensual",
+    name: "Sensual Massage Kit",
     price: 189.90,
     rating: 4.8,
     reviews: 156,
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=500&fit=crop",
-    tag: "Kit Completo"
+    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bbb6a77b3a2dc011c4f24/f5a45b82d_pexels-shvetsa-5187496.jpg",
+    tag: "Complete Kit"
   },
   {
     id: 3,
-    name: "Óleo de Massagem Premium",
+    name: "Premium Massage Oil",
     price: 89.90,
     rating: 4.7,
     reviews: 312,
-    image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=500&fit=crop",
-    tag: "Top Avaliado"
+    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bbb6a77b3a2dc011c4f24/810c46402_pexels-shvetsa-5187488.jpg",
+    tag: "Top Rated"
   },
   {
     id: 4,
-    name: "Conjunto Lingerie Luxo",
+    name: "Luxury Lingerie Set",
     price: 249.90,
     originalPrice: 329.90,
     rating: 4.9,
     reviews: 189,
-    image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=500&fit=crop",
-    tag: "Promoção"
+    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bbb6a77b3a2dc011c4f24/883b749f1_pexels-shvetsa-5187564.jpg",
+    tag: "Sale"
   }
 ];
 
@@ -58,18 +58,18 @@ export default function BestSellers() {
         >
           <div>
             <span className="inline-block px-4 py-2 rounded-full bg-rose-50 text-rose-600 text-sm font-medium mb-4">
-              Destaques
+              Featured
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-              Mais{' '}
+              Best{' '}
               <span className="bg-gradient-to-r from-rose-500 to-purple-500 bg-clip-text text-transparent">
-                Vendidos
+                Sellers
               </span>
             </h2>
           </div>
           <Link to={createPageUrl('Shop')}>
             <Button variant="outline" className="mt-4 sm:mt-0 border-rose-200 text-rose-600 hover:bg-rose-50 rounded-full">
-              Ver Todos
+              View All
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </Link>
@@ -100,7 +100,7 @@ export default function BestSellers() {
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <Button className="bg-white text-gray-900 hover:bg-rose-50 rounded-full">
                     <ShoppingBag className="w-4 h-4 mr-2" />
-                    Adicionar
+                    Add to Cart
                   </Button>
                 </div>
               </div>

@@ -7,50 +7,50 @@ const SQRT_5000 = Math.sqrt(5000);
 const testimonials = [
   {
     tempId: 0,
-    testimonial: "A IntimacyAI mudou completamente minha relação comigo mesma. Encontrei produtos que nunca imaginei.",
-    by: "Marina, 28 anos",
+    testimonial: "IntimacyAI completely changed my relationship with myself. I found products I never imagined.",
+    by: "Marina, 28",
     imgSrc: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face"
   },
   {
     tempId: 1,
-    testimonial: "Discreto, elegante e com recomendações perfeitas. O assistente AI entendeu exatamente o que eu precisava.",
-    by: "Carla, 34 anos",
+    testimonial: "Discreet, elegant and with perfect recommendations. The AI assistant understood exactly what I needed.",
+    by: "Carla, 34",
     imgSrc: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
   },
   {
     tempId: 2,
-    testimonial: "Meu parceiro e eu descobrimos uma nova dimensão do nosso relacionamento graças às sugestões do AI.",
-    by: "Ricardo, 31 anos",
+    testimonial: "My partner and I discovered a new dimension of our relationship thanks to the AI suggestions.",
+    by: "Richard, 31",
     imgSrc: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
   },
   {
     tempId: 3,
-    testimonial: "A embalagem discreta e o atendimento respeitoso me fizeram cliente fiel. Recomendo demais!",
-    by: "Juliana, 29 anos",
+    testimonial: "The discreet packaging and respectful service made me a loyal customer. Highly recommend!",
+    by: "Julia, 29",
     imgSrc: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
   },
   {
     tempId: 4,
-    testimonial: "Finalmente uma loja que entende que bem-estar íntimo é saúde. Produtos de qualidade excepcional.",
-    by: "Patricia, 42 anos",
+    testimonial: "Finally a store that understands intimate wellness is health. Exceptional quality products.",
+    by: "Patricia, 42",
     imgSrc: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
   },
   {
     tempId: 5,
-    testimonial: "O assistente AI me ajudou a superar minha timidez inicial. Processo super confortável!",
-    by: "Fernanda, 26 anos",
+    testimonial: "The AI assistant helped me overcome my initial shyness. Super comfortable process!",
+    by: "Fernanda, 26",
     imgSrc: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face"
   },
   {
     tempId: 6,
-    testimonial: "Entrega rápida, produto de alta qualidade e suporte incrível. 5 estrelas sempre!",
-    by: "Lucas, 35 anos",
+    testimonial: "Fast delivery, high quality product and incredible support. Always 5 stars!",
+    by: "Lucas, 35",
     imgSrc: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
   },
   {
     tempId: 7,
-    testimonial: "A seção de educação me ensinou muito. Comprar aqui é uma experiência de autoconhecimento.",
-    by: "Amanda, 33 anos",
+    testimonial: "The education section taught me so much. Shopping here is a self-discovery experience.",
+    by: "Amanda, 33",
     imgSrc: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=150&h=150&fit=crop&crop=face"
   }
 ];
@@ -156,14 +156,14 @@ export default function StaggerTestimonials() {
         <button
           onClick={() => handleMove(-1)}
           className="flex h-12 w-12 items-center justify-center rounded-full bg-white border-2 border-rose-200 text-rose-500 hover:bg-rose-500 hover:text-white hover:border-rose-500 transition-all duration-300 shadow-lg"
-          aria-label="Anterior"
+          aria-label="Previous"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
         <button
           onClick={() => handleMove(1)}
           className="flex h-12 w-12 items-center justify-center rounded-full bg-white border-2 border-rose-200 text-rose-500 hover:bg-rose-500 hover:text-white hover:border-rose-500 transition-all duration-300 shadow-lg"
-          aria-label="Próximo"
+          aria-label="Next"
         >
           <ChevronRight className="w-5 h-5" />
         </button>

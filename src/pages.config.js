@@ -53,6 +53,10 @@ import AIAssistant from './pages/AIAssistant';
 import Collections from './pages/Collections';
 import Wellness from './pages/Wellness';
 import Subscriptions from './pages/Subscriptions';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Cart from './pages/Cart';
+import __Layout from './Layout.jsx';
 
 
 export const PAGES = {
@@ -62,9 +66,13 @@ export const PAGES = {
     "Collections": Collections,
     "Wellness": Wellness,
     "Subscriptions": Subscriptions,
+    "About": About,
+    "Contact": Contact,
+    "Cart": Cart,
 }
 
 export const pagesConfig = {
     mainPage: "Home",
     Pages: PAGES,
+    Layout: __Layout,
 };

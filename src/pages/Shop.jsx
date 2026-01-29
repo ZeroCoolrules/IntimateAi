@@ -102,19 +102,19 @@ const products = [
 ];
 
 const categories = [
-  { value: "all", label: "Todas" },
+  { value: "all", label: "All" },
   { value: "solo", label: "Solo" },
-  { value: "couples", label: "Casais" },
-  { value: "wellness", label: "Bem-estar" },
-  { value: "massage", label: "Massagem" },
+  { value: "couples", label: "Couples" },
+  { value: "wellness", label: "Wellness" },
+  { value: "massage", label: "Massage" },
   { value: "lingerie", label: "Lingerie" },
-  { value: "accessories", label: "Acessórios" }
+  { value: "accessories", label: "Accessories" }
 ];
 
 const experienceLevels = [
-  { value: "beginner", label: "Iniciante" },
-  { value: "intermediate", label: "Intermediário" },
-  { value: "advanced", label: "Avançado" }
+  { value: "beginner", label: "Beginner" },
+  { value: "intermediate", label: "Intermediate" },
+  { value: "advanced", label: "Advanced" }
 ];
 
 export default function Shop() {
@@ -175,7 +175,7 @@ export default function Shop() {
             animate={{ opacity: 1, y: 0 }}
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4"
           >
-            Nossa Loja
+            Our Shop
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -183,7 +183,7 @@ export default function Shop() {
             transition={{ delay: 0.1 }}
             className="text-lg text-white/90 max-w-2xl mx-auto"
           >
-            Produtos premium selecionados para seu prazer e bem-estar
+            Premium products selected for your pleasure and wellness
           </motion.p>
         </div>
       </div>
@@ -195,7 +195,7 @@ export default function Shop() {
           <div className="relative flex-1">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
             <Input
-              placeholder="Buscar produtos..."
+              placeholder="Search products..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="pl-12 h-12 rounded-full border-gray-200 focus:border-rose-300"
@@ -205,7 +205,7 @@ export default function Shop() {
           {/* Category Select */}
           <Select value={selectedCategory} onValueChange={setSelectedCategory}>
             <SelectTrigger className="w-full lg:w-48 h-12 rounded-full">
-              <SelectValue placeholder="Categoria" />
+              <SelectValue placeholder="Category" />
             </SelectTrigger>
             <SelectContent>
               {categories.map(cat => (
@@ -217,13 +217,13 @@ export default function Shop() {
           {/* Sort Select */}
           <Select value={sortBy} onValueChange={setSortBy}>
             <SelectTrigger className="w-full lg:w-48 h-12 rounded-full">
-              <SelectValue placeholder="Ordenar" />
+              <SelectValue placeholder="Sort by" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="featured">Destaque</SelectItem>
-              <SelectItem value="price-asc">Menor Preço</SelectItem>
-              <SelectItem value="price-desc">Maior Preço</SelectItem>
-              <SelectItem value="rating">Melhor Avaliação</SelectItem>
+              <SelectItem value="featured">Featured</SelectItem>
+              <SelectItem value="price-asc">Lowest Price</SelectItem>
+              <SelectItem value="price-desc">Highest Price</SelectItem>
+              <SelectItem value="rating">Best Rating</SelectItem>
             </SelectContent>
           </Select>
 
@@ -232,16 +232,16 @@ export default function Shop() {
             <SheetTrigger asChild>
               <Button variant="outline" className="lg:hidden rounded-full h-12">
                 <Filter className="w-4 h-4 mr-2" />
-                Filtros
+                Filters
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-80">
               <SheetHeader>
-                <SheetTitle>Filtros</SheetTitle>
+                <SheetTitle>Filters</SheetTitle>
               </SheetHeader>
               <div className="py-6 space-y-6">
                 <div>
-                  <h3 className="font-semibold mb-4">Nível de Experiência</h3>
+                  <h3 className="font-semibold mb-4">Experience Level</h3>
                   <div className="space-y-3">
                     {experienceLevels.map(level => (
                       <label key={level.value} className="flex items-center gap-3 cursor-pointer">
@@ -264,7 +264,7 @@ export default function Shop() {
           {/* Desktop Filters */}
           <div className="hidden lg:block w-64 flex-shrink-0">
             <div className="sticky top-24 bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-              <h3 className="font-semibold text-gray-900 mb-4">Nível de Experiência</h3>
+              <h3 className="font-semibold text-gray-900 mb-4">Experience Level</h3>
               <div className="space-y-3">
                 {experienceLevels.map(level => (
                   <label key={level.value} className="flex items-center gap-3 cursor-pointer group">
@@ -287,7 +287,7 @@ export default function Shop() {
                   className="mt-4 text-rose-600 hover:text-rose-700"
                 >
                   <X className="w-4 h-4 mr-1" />
-                  Limpar filtros
+                  Clear filters
                 </Button>
               )}
             </div>
@@ -297,7 +297,7 @@ export default function Shop() {
           <div className="flex-1">
             <div className="flex items-center justify-between mb-6">
               <p className="text-gray-600">
-                {filteredProducts.length} produto{filteredProducts.length !== 1 ? 's' : ''} encontrado{filteredProducts.length !== 1 ? 's' : ''}
+                {filteredProducts.length} product{filteredProducts.length !== 1 ? 's' : ''} found
               </p>
             </div>
 
@@ -346,7 +346,7 @@ export default function Shop() {
                       <div className="absolute inset-x-4 bottom-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <Button className="w-full bg-white/95 text-gray-900 hover:bg-rose-500 hover:text-white rounded-full shadow-lg">
                           <ShoppingBag className="w-4 h-4 mr-2" />
-                          Adicionar
+                          Add to Cart
                         </Button>
                       </div>
                     </div>
@@ -390,7 +390,7 @@ export default function Shop() {
 
             {filteredProducts.length === 0 && (
               <div className="text-center py-16">
-                <p className="text-gray-500 text-lg">Nenhum produto encontrado</p>
+                <p className="text-gray-500 text-lg">No products found</p>
                 <Button
                   variant="outline"
                   onClick={() => {
@@ -400,7 +400,7 @@ export default function Shop() {
                   }}
                   className="mt-4"
                 >
-                  Limpar filtros
+                  Clear filters
                 </Button>
               </div>
             )}

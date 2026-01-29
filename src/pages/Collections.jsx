@@ -7,8 +7,8 @@ import { ArrowRight, Heart, Flame, Sparkles, Moon, Sun } from 'lucide-react';
 const collections = [
   {
     id: 1,
-    name: "Noite Romântica",
-    description: "Produtos para uma noite inesquecível a dois",
+    name: "Romantic Night",
+    description: "Products for an unforgettable night together",
     image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&h=600&fit=crop",
     icon: Heart,
     color: "from-rose-500 to-pink-600",
@@ -16,8 +16,8 @@ const collections = [
   },
   {
     id: 2,
-    name: "Autoconhecimento",
-    description: "Descubra seu corpo e seus desejos",
+    name: "Self-Discovery",
+    description: "Discover your body and desires",
     image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&h=600&fit=crop",
     icon: Sparkles,
     color: "from-purple-500 to-indigo-600",
@@ -25,8 +25,8 @@ const collections = [
   },
   {
     id: 3,
-    name: "Aventura Sensorial",
-    description: "Explore novos limites do prazer",
+    name: "Sensory Adventure",
+    description: "Explore new limits of pleasure",
     image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=600&fit=crop",
     icon: Flame,
     color: "from-orange-500 to-red-600",
@@ -34,8 +34,8 @@ const collections = [
   },
   {
     id: 4,
-    name: "Relaxamento",
-    description: "Massagem e bem-estar para corpo e mente",
+    name: "Relaxation",
+    description: "Massage and wellness for body and mind",
     image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=600&fit=crop",
     icon: Moon,
     color: "from-blue-500 to-cyan-600",
@@ -43,8 +43,8 @@ const collections = [
   },
   {
     id: 5,
-    name: "Primeira Vez",
-    description: "Produtos ideais para iniciantes",
+    name: "First Time",
+    description: "Ideal products for beginners",
     image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&h=600&fit=crop",
     icon: Sun,
     color: "from-yellow-500 to-orange-500",
@@ -53,7 +53,7 @@ const collections = [
   {
     id: 6,
     name: "Premium Selection",
-    description: "O melhor em qualidade e sofisticação",
+    description: "The best in quality and sophistication",
     image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&h=600&fit=crop",
     icon: Sparkles,
     color: "from-gray-800 to-gray-900",
@@ -72,7 +72,7 @@ export default function Collections() {
             animate={{ opacity: 1, y: 0 }}
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4"
           >
-            Coleções Especiais
+            Special Collections
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -80,7 +80,7 @@ export default function Collections() {
             transition={{ delay: 0.1 }}
             className="text-lg text-white/90 max-w-2xl mx-auto"
           >
-            Produtos cuidadosamente selecionados para cada momento
+            Carefully curated products for every moment
           </motion.p>
         </div>
       </div>
@@ -119,7 +119,7 @@ export default function Collections() {
                       <h3 className="text-2xl font-bold mb-2">{collection.name}</h3>
                       <p className="text-white/80 mb-4">{collection.description}</p>
                       <div className="flex items-center gap-2 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        Explorar Coleção
+                        Explore Collection
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </div>

@@ -7,41 +7,41 @@ import { Progress } from '@/components/ui/progress';
 const questions = [
   {
     id: 'use_type',
-    question: "Para quem é a experiência?",
+    question: "Who is this experience for?",
     options: [
-      { value: 'solo', label: 'Para Mim', icon: Heart, description: 'Prazer individual e autoconhecimento' },
-      { value: 'couples', label: 'Para Casal', icon: Users, description: 'Experiências compartilhadas' },
-      { value: 'both', label: 'Ambos', icon: Sparkles, description: 'Flexibilidade total' }
+      { value: 'solo', label: 'For Me', icon: Heart, description: 'Individual pleasure and self-discovery' },
+      { value: 'couples', label: 'For Couples', icon: Users, description: 'Shared experiences' },
+      { value: 'both', label: 'Both', icon: Sparkles, description: 'Total flexibility' }
     ]
   },
   {
     id: 'experience',
-    question: "Qual seu nível de experiência?",
+    question: "What's your experience level?",
     options: [
-      { value: 'curious', label: 'Curioso(a)', icon: Sparkles, description: 'Primeira vez explorando' },
-      { value: 'beginner', label: 'Iniciante', icon: Heart, description: 'Algumas experiências' },
-      { value: 'experienced', label: 'Experiente', icon: Flame, description: 'Conheço bem minhas preferências' },
-      { value: 'adventurous', label: 'Aventureiro(a)', icon: Shield, description: 'Aberto a novas descobertas' }
+      { value: 'curious', label: 'Curious', icon: Sparkles, description: 'First time exploring' },
+      { value: 'beginner', label: 'Beginner', icon: Heart, description: 'Some experience' },
+      { value: 'experienced', label: 'Experienced', icon: Flame, description: 'Know my preferences well' },
+      { value: 'adventurous', label: 'Adventurous', icon: Shield, description: 'Open to new discoveries' }
     ]
   },
   {
     id: 'interest',
-    question: "O que mais te interessa?",
+    question: "What interests you most?",
     options: [
-      { value: 'pleasure', label: 'Prazer Intenso', icon: Flame, description: 'Sensações estimulantes' },
-      { value: 'wellness', label: 'Bem-estar', icon: Heart, description: 'Saúde íntima e cuidados' },
-      { value: 'connection', label: 'Conexão', icon: Users, description: 'Intimidade e proximidade' },
-      { value: 'exploration', label: 'Exploração', icon: Sparkles, description: 'Novas experiências' }
+      { value: 'pleasure', label: 'Intense Pleasure', icon: Flame, description: 'Stimulating sensations' },
+      { value: 'wellness', label: 'Wellness', icon: Heart, description: 'Intimate health and care' },
+      { value: 'connection', label: 'Connection', icon: Users, description: 'Intimacy and closeness' },
+      { value: 'exploration', label: 'Exploration', icon: Sparkles, description: 'New experiences' }
     ]
   },
   {
     id: 'budget',
-    question: "Qual seu orçamento?",
+    question: "What's your budget?",
     options: [
-      { value: 'budget', label: 'Até R$100', icon: null, description: 'Opções acessíveis' },
-      { value: 'mid', label: 'R$100 - R$250', icon: null, description: 'Boa relação custo-benefício' },
-      { value: 'premium', label: 'R$250 - R$500', icon: null, description: 'Produtos premium' },
-      { value: 'luxury', label: 'Acima de R$500', icon: null, description: 'Experiência de luxo' }
+      { value: 'budget', label: 'Up to $20', icon: null, description: 'Affordable options' },
+      { value: 'mid', label: '$20 - $50', icon: null, description: 'Good value' },
+      { value: 'premium', label: '$50 - $100', icon: null, description: 'Premium products' },
+      { value: 'luxury', label: 'Over $100', icon: null, description: 'Luxury experience' }
     ]
   }
 ];
@@ -109,13 +109,13 @@ export default function AIAssistant() {
             <Bot className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
-            Assistente{' '}
             <span className="bg-gradient-to-r from-rose-500 to-purple-500 bg-clip-text text-transparent">
               IntimacyAI
-            </span>
+            </span>{' '}
+            Assistant
           </h1>
           <p className="text-gray-600">
-            Responda algumas perguntas e encontraremos os produtos perfeitos para você
+            Answer a few questions and we'll find the perfect products for you
           </p>
         </motion.div>
 
@@ -124,7 +124,7 @@ export default function AIAssistant() {
             {/* Progress */}
             <div className="mb-8">
               <div className="flex justify-between text-sm text-gray-500 mb-2">
-                <span>Pergunta {currentStep + 1} de {questions.length}</span>
+                <span>Question {currentStep + 1} of {questions.length}</span>
                 <span>{Math.round(progress)}%</span>
               </div>
               <Progress value={progress} className="h-2" />
@@ -187,7 +187,7 @@ export default function AIAssistant() {
                     className="text-gray-500"
                   >
                     <ArrowLeft className="w-4 h-4 mr-2" />
-                    Voltar
+                    Back
                   </Button>
                   <div className="flex gap-1">
                     {questions.map((_, idx) => (
@@ -220,10 +220,10 @@ export default function AIAssistant() {
                 <Sparkles className="w-8 h-8 text-white" />
               </motion.div>
               <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                Suas Recomendações Personalizadas
+                Your Personalized Recommendations
               </h2>
               <p className="text-gray-600">
-                Com base nas suas respostas, selecionamos estes produtos especialmente para você
+                Based on your answers, we selected these products especially for you
               </p>
             </div>
 
@@ -261,11 +261,11 @@ export default function AIAssistant() {
                 className="flex-1 rounded-full border-rose-200 text-rose-600 hover:bg-rose-50"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
-                Refazer Questionário
+                Start Over
               </Button>
               <Button className="flex-1 bg-gradient-to-r from-rose-500 to-purple-500 hover:from-rose-600 hover:to-purple-600 rounded-full">
                 <ShoppingBag className="w-4 h-4 mr-2" />
-                Adicionar Todos ao Carrinho
+                Add All to Cart
               </Button>
             </div>
           </motion.div>
@@ -279,7 +279,7 @@ export default function AIAssistant() {
           className="text-center text-sm text-gray-500 mt-6"
         >
           <Shield className="w-4 h-4 inline mr-1" />
-          Suas respostas são 100% confidenciais e não são armazenadas
+          Your answers are 100% confidential and not stored
         </motion.p>
       </div>
     </div>

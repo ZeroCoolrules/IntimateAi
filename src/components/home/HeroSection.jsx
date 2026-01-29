@@ -46,29 +46,29 @@ export default function HeroSection() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-rose-100 text-rose-600 text-sm font-medium mb-6"
             >
               <Sparkles className="w-4 h-4" />
-              Assistente AI Exclusivo
+              Exclusive AI Assistant
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6"
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8"
             >
-              Descubra o{' '}
+              Discover the{' '}
               <span className="bg-gradient-to-r from-rose-500 via-pink-500 to-purple-500 bg-clip-text text-transparent">
-                Prazer
+                Pleasure
               </span>{' '}
-              Que Você Merece
+              You Deserve
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-lg sm:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0"
+              className="text-lg sm:text-xl text-gray-600 mb-10 max-w-xl mx-auto lg:mx-0"
             >
-              A IntimacyAI combina produtos premium de bem-estar íntimo com inteligência artificial para encontrar exatamente o que você precisa.
+              IntimacyAI combines premium intimate wellness products with artificial intelligence to find exactly what you need.
             </motion.p>
 
             <motion.div

@@ -7,40 +7,40 @@ import { Button } from '@/components/ui/button';
 
 const plans = [
   {
-    name: "Descoberta",
-    price: 99.90,
-    description: "Ideal para iniciantes",
+    name: "Discovery",
+    price: 19.99,
+    description: "Ideal for beginners",
     features: [
-      "1 produto surpresa por mês",
-      "Amostras de lubrificantes",
-      "Guia de uso incluído",
-      "Embalagem premium"
+      "1 surprise product per month",
+      "Lubricant samples",
+      "Usage guide included",
+      "Premium packaging"
     ],
     popular: false
   },
   {
-    name: "Prazer",
-    price: 179.90,
-    description: "Nosso mais popular",
+    name: "Pleasure",
+    price: 35.99,
+    description: "Our most popular",
     features: [
-      "2-3 produtos surpresa por mês",
-      "Produtos premium selecionados",
-      "Acesso a conteúdo exclusivo",
-      "Desconto em compras avulsas",
-      "Presente de aniversário"
+      "2-3 surprise products per month",
+      "Selected premium products",
+      "Access to exclusive content",
+      "Discount on one-time purchases",
+      "Birthday gift"
     ],
     popular: true
   },
   {
-    name: "Luxo",
-    price: 299.90,
-    description: "Experiência completa",
+    name: "Luxury",
+    price: 59.99,
+    description: "Complete experience",
     features: [
-      "3-5 produtos premium por mês",
-      "Marcas internacionais",
-      "Consulta com sexólogo",
-      "Frete grátis em todos pedidos",
-      "Kit de boas-vindas exclusivo"
+      "3-5 premium products per month",
+      "International brands",
+      "Consultation with sexologist",
+      "Free shipping on all orders",
+      "Exclusive welcome kit"
     ],
     popular: false
   }
@@ -90,7 +90,7 @@ export default function SubscriptionSection() {
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                   <span className="inline-flex items-center gap-1 px-4 py-1 rounded-full bg-yellow-400 text-yellow-900 text-xs font-bold">
                     <Sparkles className="w-3 h-3" />
-                    MAIS POPULAR
+                    MOST POPULAR
                   </span>
                 </div>
               )}
@@ -106,11 +106,11 @@ export default function SubscriptionSection() {
 
               <div className="text-center mb-6">
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className={`text-sm ${plan.popular ? 'text-white/80' : 'text-gray-500'}`}>R$</span>
+                  <span className={`text-sm ${plan.popular ? 'text-white/80' : 'text-gray-500'}`}>$</span>
                   <span className={`text-4xl font-bold ${plan.popular ? 'text-white' : 'text-gray-900'}`}>
-                    {plan.price.toFixed(2).replace('.', ',')}
+                    {plan.price.toFixed(2)}
                   </span>
-                  <span className={`text-sm ${plan.popular ? 'text-white/80' : 'text-gray-500'}`}>/mês</span>
+                  <span className={`text-sm ${plan.popular ? 'text-white/80' : 'text-gray-500'}`}>/mo</span>
                 </div>
               </div>
 

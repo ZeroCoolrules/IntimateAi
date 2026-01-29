@@ -69,9 +69,7 @@ export default function Layout({ children, currentPageName }) {
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-500 to-purple-500 flex items-center justify-center">
                 <Heart className="w-5 h-5 text-white" fill="white" />
               </div>
-              <span className={`text-xl font-bold ${
-                scrolled || !isHomePage ? 'text-gray-900' : 'text-white'
-              }`}>
+              <span className="text-xl font-bold text-gray-900">
                 IntimacyAI
               </span>
             </Link>
@@ -85,9 +83,7 @@ export default function Layout({ children, currentPageName }) {
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     currentPageName === item.page
                       ? 'bg-rose-500 text-white'
-                      : scrolled || !isHomePage
-                        ? 'text-gray-700 hover:bg-rose-50 hover:text-rose-600'
-                        : 'text-white/90 hover:bg-white/10 hover:text-white'
+                      : 'text-gray-900 hover:bg-rose-50 hover:text-rose-600'
                   }`}
                 >
                   {item.name}
@@ -101,9 +97,7 @@ export default function Layout({ children, currentPageName }) {
                 <Button 
                   variant="ghost" 
                   size="icon"
-                  className={`rounded-full relative ${
-                    scrolled || !isHomePage ? 'text-gray-700 hover:bg-rose-50' : 'text-white hover:bg-white/10'
-                  }`}
+                  className="rounded-full relative text-gray-900 hover:bg-rose-50"
                 >
                   <ShoppingBag className="w-5 h-5" />
                   <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-rose-500 text-white text-xs flex items-center justify-center">
@@ -116,9 +110,7 @@ export default function Layout({ children, currentPageName }) {
                 <Button 
                   variant="ghost" 
                   size="icon"
-                  className={`rounded-full ${
-                    scrolled || !isHomePage ? 'text-gray-700 hover:bg-rose-50' : 'text-white hover:bg-white/10'
-                  }`}
+                  className="rounded-full text-gray-900 hover:bg-rose-50"
                 >
                   <User className="w-5 h-5" />
                 </Button>
@@ -128,9 +120,7 @@ export default function Layout({ children, currentPageName }) {
               <Button
                 variant="ghost"
                 size="icon"
-                className={`lg:hidden rounded-full ${
-                  scrolled || !isHomePage ? 'text-gray-700' : 'text-white'
-                }`}
+                className="lg:hidden rounded-full text-gray-900"
                 onClick={() => setMobileMenuOpen(true)}
               >
                 <Menu className="w-6 h-6" />

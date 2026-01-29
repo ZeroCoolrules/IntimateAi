@@ -8,21 +8,21 @@ import { Button } from '@/components/ui/button';
 const articles = [
   {
     icon: Heart,
-    title: "Autoconhecimento Íntimo",
-    description: "Descubra como a exploração do próprio corpo pode transformar sua vida.",
-    category: "Bem-estar"
+    title: "Intimate Self-Knowledge",
+    description: "Discover how exploring your own body can transform your life.",
+    category: "Wellness"
   },
   {
     icon: Brain,
-    title: "Saúde Sexual e Mental",
-    description: "A conexão entre prazer e saúde mental: o que a ciência diz.",
-    category: "Educação"
+    title: "Sexual & Mental Health",
+    description: "The connection between pleasure and mental health: what science says.",
+    category: "Education"
   },
   {
     icon: Sparkles,
-    title: "Comunicação em Casais",
-    description: "Como falar sobre desejos e fantasias com seu parceiro.",
-    category: "Relacionamentos"
+    title: "Couples Communication",
+    description: "How to talk about desires and fantasies with your partner.",
+    category: "Relationships"
   }
 ];
 
@@ -38,16 +38,16 @@ export default function WellnessSection() {
             viewport={{ once: true }}
           >
             <span className="inline-block px-4 py-2 rounded-full bg-purple-50 text-purple-600 text-sm font-medium mb-4">
-              Educação & Bem-estar
+              Education & Wellness
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-              Conhecimento é{' '}
+              Knowledge is{' '}
               <span className="bg-gradient-to-r from-purple-500 to-rose-500 bg-clip-text text-transparent">
-                Poder
+                Power
               </span>
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Acreditamos que bem-estar íntimo vai além dos produtos. Nossa seção educacional oferece conteúdos cuidadosamente elaborados para sua jornada de autoconhecimento.
+              We believe that intimate wellness goes beyond products. Our educational section offers carefully crafted content for your self-discovery journey.
             </p>
 
             <div className="space-y-4 mb-8">
@@ -76,7 +76,7 @@ export default function WellnessSection() {
             <Link to={createPageUrl('Wellness')}>
               <Button className="bg-gradient-to-r from-purple-500 to-rose-500 hover:from-purple-600 hover:to-rose-600 text-white rounded-full px-8">
                 <BookOpen className="w-4 h-4 mr-2" />
-                Explorar Conteúdos
+                Explore Content
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
@@ -104,8 +104,8 @@ export default function WellnessSection() {
                       <BookOpen className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900">+50 Artigos</p>
-                      <p className="text-sm text-gray-500">Conteúdo exclusivo</p>
+                      <p className="font-semibold text-gray-900">+50 Articles</p>
+                      <p className="text-sm text-gray-500">Exclusive content</p>
                     </div>
                   </div>
                   <div className="w-full bg-gray-100 rounded-full h-2">

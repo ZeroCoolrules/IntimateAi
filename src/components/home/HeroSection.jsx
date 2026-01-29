@@ -92,7 +92,7 @@ export default function HeroSection() {
               <Link to={createPageUrl('Shop')}>
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto bg-rose-100/60 hover:bg-rose-200/60 text-rose-700 font-semibold px-8 py-6 text-lg rounded-full transition-all duration-300 border-0"
+                  className="w-full sm:w-auto bg-rose-50/90 hover:bg-rose-100/90 text-rose-800 font-semibold px-8 py-6 text-lg rounded-full transition-all duration-300 border-0 shadow-sm"
                 >
                   <ShieldCheck className="w-5 h-5 mr-2" />
                   Shop Discreetly

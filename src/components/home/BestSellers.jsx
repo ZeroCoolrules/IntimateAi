@@ -9,8 +9,8 @@ const bestSellers = [
   {
     id: 1,
     name: "Premium Silicone Vibrator",
-    price: 299.90,
-    originalPrice: 399.90,
+    price: 59.99,
+    originalPrice: 79.99,
     rating: 4.9,
     reviews: 234,
     image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bbb6a77b3a2dc011c4f24/afe7bbec9_pexels-shvetsa-5187355.jpg",
@@ -19,7 +19,7 @@ const bestSellers = [
   {
     id: 2,
     name: "Sensual Massage Kit",
-    price: 189.90,
+    price: 37.99,
     rating: 4.8,
     reviews: 156,
     image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bbb6a77b3a2dc011c4f24/f5a45b82d_pexels-shvetsa-5187496.jpg",
@@ -28,7 +28,7 @@ const bestSellers = [
   {
     id: 3,
     name: "Premium Massage Oil",
-    price: 89.90,
+    price: 17.99,
     rating: 4.7,
     reviews: 312,
     image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bbb6a77b3a2dc011c4f24/810c46402_pexels-shvetsa-5187488.jpg",
@@ -37,8 +37,8 @@ const bestSellers = [
   {
     id: 4,
     name: "Luxury Lingerie Set",
-    price: 249.90,
-    originalPrice: 329.90,
+    price: 49.99,
+    originalPrice: 65.99,
     rating: 4.9,
     reviews: 189,
     image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bbb6a77b3a2dc011c4f24/883b749f1_pexels-shvetsa-5187564.jpg",
@@ -117,11 +117,11 @@ export default function BestSellers() {
 
               <div className="flex items-center gap-2">
                 <span className="text-lg font-bold text-gray-900">
-                  R$ {product.price.toFixed(2).replace('.', ',')}
+                  ${product.price.toFixed(2)}
                 </span>
                 {product.originalPrice && (
                   <span className="text-sm text-gray-400 line-through">
-                    R$ {product.originalPrice.toFixed(2).replace('.', ',')}
+                    ${product.originalPrice.toFixed(2)}
                   </span>
                 )}
               </div>

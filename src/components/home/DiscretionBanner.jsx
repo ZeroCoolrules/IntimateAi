@@ -5,23 +5,23 @@ import { ShieldCheck, Package, Lock, CreditCard } from 'lucide-react';
 const features = [
   {
     icon: Package,
-    title: "Embalagem Neutra",
-    description: "Caixas sem identificação, impossível saber o conteúdo"
+    title: "Neutral Packaging",
+    description: "Boxes without identification, impossible to know the content"
   },
   {
     icon: CreditCard,
-    title: "Cobrança Discreta",
-    description: "Aparece como 'INTIMACY COMMERCE' na fatura"
+    title: "Discreet Billing",
+    description: "Appears as 'INTIMACY COMMERCE' on your statement"
   },
   {
     icon: Lock,
-    title: "Dados Protegidos",
-    description: "Criptografia de ponta e privacidade total"
+    title: "Protected Data",
+    description: "End-to-end encryption and total privacy"
   },
   {
     icon: ShieldCheck,
-    title: "100% Confidencial",
-    description: "Suas informações nunca são compartilhadas"
+    title: "100% Confidential",
+    description: "Your information is never shared"
   }
 ];
 
@@ -44,13 +44,13 @@ export default function DiscretionBanner() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Sua Privacidade é Nossa{' '}
+            Your Privacy is Our{' '}
             <span className="bg-gradient-to-r from-rose-400 to-pink-400 bg-clip-text text-transparent">
-              Prioridade
+              Priority
             </span>
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Entendemos a importância da discrição. Cada detalhe foi pensado para garantir sua total privacidade.
+            We understand the importance of discretion. Every detail has been designed to ensure your complete privacy.
           </p>
         </motion.div>
 

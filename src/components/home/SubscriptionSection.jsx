@@ -58,16 +58,16 @@ export default function SubscriptionSection() {
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-50 text-rose-600 text-sm font-medium mb-4">
             <Gift className="w-4 h-4" />
-            Clube de Assinatura
+            Subscription Club
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Surpresas Mensais{' '}
+            Monthly Surprises{' '}
             <span className="bg-gradient-to-r from-rose-500 to-purple-500 bg-clip-text text-transparent">
-              na Sua Porta
+              at Your Door
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Receba produtos selecionados todo mês e explore novas experiências com curadoria personalizada
+            Receive curated products every month and explore new experiences with personalized curation
           </p>
         </motion.div>
 
@@ -133,7 +133,7 @@ export default function SubscriptionSection() {
                       : 'bg-gradient-to-r from-rose-500 to-purple-500 text-white hover:from-rose-600 hover:to-purple-600'
                   }`}
                 >
-                  Assinar Agora
+                  Subscribe Now
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>

@@ -20,20 +20,20 @@ const navigation = [
 
 const footerLinks = {
   shop: [
-    { name: 'Todos os Produtos', page: 'Shop' },
-    { name: 'Mais Vendidos', page: 'Shop' },
-    { name: 'Novidades', page: 'Shop' },
-    { name: 'Promoções', page: 'Shop' },
+    { name: 'All Products', page: 'Shop' },
+    { name: 'Best Sellers', page: 'Shop' },
+    { name: 'New Arrivals', page: 'Shop' },
+    { name: 'Sales', page: 'Shop' },
   ],
   about: [
-    { name: 'Sobre Nós', page: 'About' },
-    { name: 'Contato', page: 'Contact' },
+    { name: 'About Us', page: 'About' },
+    { name: 'Contact', page: 'Contact' },
     { name: 'Blog', page: 'Wellness' },
   ],
   support: [
     { name: 'FAQ', page: 'Home' },
-    { name: 'Trocas e Devoluções', page: 'Contact' },
-    { name: 'Política de Privacidade', page: 'About' },
+    { name: 'Returns & Exchanges', page: 'Contact' },
+    { name: 'Privacy Policy', page: 'About' },
   ],
 };
 
@@ -62,8 +62,8 @@ export default function Layout({ children, currentPageName }) {
       <header 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled || !isHomePage
-            ? 'bg-white/80 backdrop-blur-md shadow-sm' 
-            : 'bg-white/10 backdrop-blur-sm'
+            ? 'bg-white/70 backdrop-blur-md shadow-sm' 
+            : 'bg-white/5 backdrop-blur-sm'
         }`}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -244,7 +244,7 @@ export default function Layout({ children, currentPageName }) {
                 <span className="text-xl font-bold">IntimacyAI</span>
               </div>
               <p className="text-gray-400 text-sm mb-4">
-                Revolucionando o bem-estar íntimo através de tecnologia, qualidade e respeito.
+                Revolutionizing intimate wellness through technology, quality, and respect.
               </p>
               <div className="flex gap-4">
                 <a href="#" className="text-gray-400 hover:text-rose-400 transition-colors">
@@ -261,7 +261,7 @@ export default function Layout({ children, currentPageName }) {
 
             {/* Shop Links */}
             <div>
-              <h3 className="font-semibold mb-4">Loja</h3>
+              <h3 className="font-semibold mb-4">Shop</h3>
               <ul className="space-y-2">
                 {footerLinks.shop.map((link, index) => (
                   <li key={index}>
@@ -278,7 +278,7 @@ export default function Layout({ children, currentPageName }) {
 
             {/* About Links */}
             <div>
-              <h3 className="font-semibold mb-4">Empresa</h3>
+              <h3 className="font-semibold mb-4">Company</h3>
               <ul className="space-y-2">
                 {footerLinks.about.map((link, index) => (
                   <li key={index}>
@@ -295,7 +295,7 @@ export default function Layout({ children, currentPageName }) {
 
             {/* Support Links */}
             <div>
-              <h3 className="font-semibold mb-4">Suporte</h3>
+              <h3 className="font-semibold mb-4">Support</h3>
               <ul className="space-y-2">
                 {footerLinks.support.map((link, index) => (
                   <li key={index}>
@@ -316,24 +316,24 @@ export default function Layout({ children, currentPageName }) {
             <div className="flex flex-wrap justify-center gap-6 mb-8">
               <div className="flex items-center gap-2 text-gray-400">
                 <Shield className="w-5 h-5 text-green-500" />
-                <span className="text-sm">Pagamento Seguro</span>
+                <span className="text-sm">Secure Payment</span>
               </div>
               <div className="flex items-center gap-2 text-gray-400">
                 <Package className="w-5 h-5 text-rose-500" />
-                <span className="text-sm">Embalagem Discreta</span>
+                <span className="text-sm">Discreet Packaging</span>
               </div>
               <div className="flex items-center gap-2 text-gray-400">
                 <Heart className="w-5 h-5 text-pink-500" />
-                <span className="text-sm">Produtos Premium</span>
+                <span className="text-sm">Premium Products</span>
               </div>
             </div>
           </div>
 
           {/* Copyright */}
           <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-            <p>© 2024 IntimacyAI. Todos os direitos reservados.</p>
+            <p>© 2024 IntimacyAI. All rights reserved.</p>
             <p className="mt-2">
-              Deve ter 18+ anos para acessar este site. Produtos destinados apenas para adultos.
+              Must be 18+ years old to access this site. Products for adults only.
             </p>
           </div>
         </div>

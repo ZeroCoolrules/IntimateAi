@@ -4,28 +4,28 @@ import { ChevronDown, HelpCircle } from 'lucide-react';
 
 const faqs = [
   {
-    question: "Como é a embalagem dos produtos?",
-    answer: "Todos os produtos são enviados em embalagens neutras, sem nenhuma identificação externa. A caixa não possui logotipos ou descrições que indiquem o conteúdo. Sua privacidade é nossa prioridade."
+    question: "What is the product packaging like?",
+    answer: "All products are shipped in neutral packaging, with no external identification. The box has no logos or descriptions indicating the contents. Your privacy is our priority."
   },
   {
-    question: "Qual o nome que aparece na fatura do cartão?",
-    answer: "A cobrança aparece como 'INTIMACY COMMERCE' ou 'IC COMERCIO' na sua fatura, de forma discreta e sem referência ao tipo de produto adquirido."
+    question: "What name appears on the card statement?",
+    answer: "The charge appears as 'INTIMACY COMMERCE' or 'IC COMMERCE' on your statement, discreetly and without reference to the type of product purchased."
   },
   {
-    question: "Os produtos são seguros?",
-    answer: "Sim! Trabalhamos apenas com produtos certificados, feitos com materiais seguros para o corpo humano (body-safe). Todos passam por rigoroso controle de qualidade e possuem certificação da ANVISA quando aplicável."
+    question: "Are the products safe?",
+    answer: "Yes! We only work with certified products made with body-safe materials. All undergo rigorous quality control and have FDA certification when applicable."
   },
   {
-    question: "Posso devolver um produto?",
-    answer: "Produtos lacrados podem ser devolvidos em até 7 dias após o recebimento. Por questões de higiene, produtos abertos não são aceitos para devolução, exceto em caso de defeito de fabricação."
+    question: "Can I return a product?",
+    answer: "Sealed products can be returned within 7 days of receipt. For hygiene reasons, opened products are not accepted for return, except in case of manufacturing defects."
   },
   {
-    question: "Como funciona o Assistente AI?",
-    answer: "Nosso assistente utiliza inteligência artificial para entender suas preferências e nível de experiência através de perguntas simples e discretas. Com base nas suas respostas, recomendamos produtos personalizados para você."
+    question: "How does the AI Assistant work?",
+    answer: "Our assistant uses artificial intelligence to understand your preferences and experience level through simple, discreet questions. Based on your answers, we recommend personalized products for you."
   },
   {
-    question: "Quanto tempo demora a entrega?",
-    answer: "O prazo de entrega varia de 2 a 7 dias úteis, dependendo da sua localização. Oferecemos opção de entrega expressa para as principais capitais."
+    question: "How long does delivery take?",
+    answer: "Delivery time varies from 2 to 7 business days, depending on your location. We offer express delivery options for major cities."
   }
 ];
 
@@ -43,12 +43,12 @@ export default function FAQSection() {
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-50 text-rose-600 text-sm font-medium mb-4">
             <HelpCircle className="w-4 h-4" />
-            Dúvidas Frequentes
+            Frequently Asked
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Perguntas{' '}
+            Frequently Asked{' '}
             <span className="bg-gradient-to-r from-rose-500 to-purple-500 bg-clip-text text-transparent">
-              Frequentes
+              Questions
             </span>
           </h2>
         </motion.div>

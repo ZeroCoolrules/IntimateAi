@@ -1,0 +1,43 @@
+{
+  "name": "AIRecommendation",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email do usu\u00e1rio"
+    },
+    "preferences": {
+      "type": "object",
+      "description": "Prefer\u00eancias do usu\u00e1rio"
+    },
+    "recommended_products": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs dos produtos recomendados"
+    },
+    "comfort_level": {
+      "type": "string",
+      "enum": [
+        "curious",
+        "beginner",
+        "experienced",
+        "adventurous"
+      ],
+      "description": "N\u00edvel de conforto"
+    },
+    "use_type": {
+      "type": "string",
+      "enum": [
+        "solo",
+        "couples",
+        "both"
+      ],
+      "description": "Tipo de uso"
+    }
+  },
+  "required": [
+    "preferences"
+  ]
+}

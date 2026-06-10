@@ -1,0 +1,65 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Product title"
+    },
+    "sku": {
+      "type": "string",
+      "description": "SKU identifier"
+    },
+    "upc": {
+      "type": "string",
+      "description": "UPC barcode"
+    },
+    "category": {
+      "type": "string",
+      "description": "Product category"
+    },
+    "manufacturer": {
+      "type": "string",
+      "description": "Manufacturer name"
+    },
+    "wholesale_price": {
+      "type": "number",
+      "description": "Wholesale price"
+    },
+    "msrp": {
+      "type": "number",
+      "description": "Retail price (MSRP)"
+    },
+    "current_inventory": {
+      "type": "number",
+      "description": "Current stock quantity"
+    },
+    "body_html": {
+      "type": "string",
+      "description": "Product description HTML"
+    },
+    "image_1": {
+      "type": "string",
+      "description": "Primary product image URL"
+    },
+    "image_2": {
+      "type": "string",
+      "description": "Secondary product image URL"
+    },
+    "image_3": {
+      "type": "string",
+      "description": "Third product image URL"
+    },
+    "image_4": {
+      "type": "string",
+      "description": "Fourth product image URL"
+    },
+    "image_5": {
+      "type": "string",
+      "description": "Fifth product image URL"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

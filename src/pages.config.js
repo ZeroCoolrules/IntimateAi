@@ -56,6 +56,7 @@ import Subscriptions from './pages/Subscriptions';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Cart from './pages/Cart';
+import BargainPleasure from './pages/BargainPleasure';
 import __Layout from './Layout.jsx';
 
 
@@ -69,6 +70,7 @@ export const PAGES = {
     "About": About,
     "Contact": Contact,
     "Cart": Cart,
+    "BargainPleasure": BargainPleasure,
 }
 
 export const pagesConfig = {

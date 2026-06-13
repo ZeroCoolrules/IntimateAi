@@ -10,20 +10,20 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "contato@intimacyai.com.br",
-    description: "Resposta em até 24h"
+    value: "contact@intimacyai.com",
+    description: "Response within 24 hours"
   },
   {
     icon: Phone,
-    title: "WhatsApp",
-    value: "(11) 99999-9999",
-    description: "Seg-Sex, 9h às 18h"
+    title: "Phone",
+    value: "+1 (800) 555-0199",
+    description: "Mon–Fri, 9am to 6pm"
   },
   {
     icon: MapPin,
-    title: "Endereço",
-    value: "São Paulo, SP",
-    description: "Apenas escritório"
+    title: "Address",
+    value: "United States",
+    description: "Office only"
   }
 ];
 
@@ -58,7 +58,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4"
           >
-            Fale Conosco
+            Contact Us
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ export default function Contact() {
             transition={{ delay: 0.1 }}
             className="text-lg text-white/90 max-w-2xl mx-auto"
           >
-            Estamos aqui para ajudar. Entre em contato conosco de forma discreta e confidencial.
+            We're here to help. Reach out to us discreetly and confidentially.
           </motion.p>
         </div>
       </div>
@@ -106,20 +106,20 @@ export default function Contact() {
             >
               <div className="flex items-center gap-3 mb-4">
                 <Clock className="w-5 h-5 text-rose-600" />
-                <h3 className="font-semibold text-gray-900">Horário de Atendimento</h3>
+                <h3 className="font-semibold text-gray-900">Business Hours</h3>
               </div>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Segunda a Sexta</span>
-                  <span className="font-medium text-gray-900">9h às 18h</span>
+                  <span className="text-gray-600">Monday to Friday</span>
+                  <span className="font-medium text-gray-900">9am – 6pm</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Sábado</span>
-                  <span className="font-medium text-gray-900">9h às 13h</span>
+                  <span className="text-gray-600">Saturday</span>
+                  <span className="font-medium text-gray-900">9am – 1pm</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Domingo</span>
-                  <span className="font-medium text-gray-500">Fechado</span>
+                  <span className="text-gray-600">Sunday</span>
+                  <span className="font-medium text-gray-500">Closed</span>
                 </div>
               </div>
             </motion.div>
@@ -135,15 +135,13 @@ export default function Contact() {
             <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
               {!submitted ? (
                 <>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">Envie sua Mensagem</h2>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">Send a Message</h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Nome
-                        </label>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
                         <Input
-                          placeholder="Seu nome"
+                          placeholder="Your name"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           className="rounded-xl"
@@ -151,12 +149,10 @@ export default function Contact() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Email
-                        </label>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
                         <Input
                           type="email"
-                          placeholder="seu@email.com"
+                          placeholder="you@email.com"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           className="rounded-xl"
@@ -166,32 +162,28 @@ export default function Contact() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Assunto
-                      </label>
-                      <Select 
-                        value={formData.subject} 
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                      <Select
+                        value={formData.subject}
                         onValueChange={(value) => setFormData({ ...formData, subject: value })}
                       >
                         <SelectTrigger className="rounded-xl">
-                          <SelectValue placeholder="Selecione o assunto" />
+                          <SelectValue placeholder="Select a subject" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="order">Dúvida sobre pedido</SelectItem>
-                          <SelectItem value="product">Informações sobre produto</SelectItem>
-                          <SelectItem value="return">Troca ou devolução</SelectItem>
-                          <SelectItem value="subscription">Assinatura</SelectItem>
-                          <SelectItem value="other">Outro assunto</SelectItem>
+                          <SelectItem value="order">Order inquiry</SelectItem>
+                          <SelectItem value="product">Product information</SelectItem>
+                          <SelectItem value="return">Return or exchange</SelectItem>
+                          <SelectItem value="subscription">Subscription</SelectItem>
+                          <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Mensagem
-                      </label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
                       <Textarea
-                        placeholder="Como podemos ajudar?"
+                        placeholder="How can we help?"
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         className="rounded-xl min-h-[150px]"
@@ -199,17 +191,17 @@ export default function Contact() {
                       />
                     </div>
 
-                    <Button 
+                    <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-rose-500 to-purple-500 hover:from-rose-600 hover:to-purple-600 rounded-full py-6"
                     >
                       <Send className="w-4 h-4 mr-2" />
-                      Enviar Mensagem
+                      Send Message
                     </Button>
                   </form>
 
                   <p className="text-center text-sm text-gray-500 mt-6">
-                    Sua mensagem é confidencial. Respondemos em até 24 horas úteis.
+                    Your message is confidential. We respond within 24 business hours.
                   </p>
                 </>
               ) : (
@@ -221,11 +213,11 @@ export default function Contact() {
                   <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-100 mb-6">
                     <CheckCircle className="w-10 h-10 text-green-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Mensagem Enviada!</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
                   <p className="text-gray-600 mb-6">
-                    Obrigado pelo contato. Responderemos em breve.
+                    Thank you for reaching out. We'll get back to you shortly.
                   </p>
-                  <Button 
+                  <Button
                     variant="outline"
                     onClick={() => {
                       setSubmitted(false);
@@ -233,7 +225,7 @@ export default function Contact() {
                     }}
                     className="rounded-full"
                   >
-                    Enviar Nova Mensagem
+                    Send Another Message
                   </Button>
                 </motion.div>
               )}

@@ -6,48 +6,48 @@ import { Button } from '@/components/ui/button';
 const plans = [
   {
     id: 'discovery',
-    name: "Descoberta",
-    price: 99.90,
-    description: "Ideal para iniciantes que querem explorar",
+    name: "Discovery",
+    price: 19.99,
+    description: "Ideal for beginners who want to explore",
     features: [
-      "1 produto surpresa por mês",
-      "Amostras de lubrificantes",
-      "Guia de uso incluído",
-      "Embalagem premium discreta",
-      "Cancelamento quando quiser"
+      "1 surprise product per month",
+      "Lubricant samples",
+      "Usage guide included",
+      "Premium discreet packaging",
+      "Cancel anytime"
     ],
     color: "from-rose-400 to-pink-500",
     popular: false
   },
   {
     id: 'pleasure',
-    name: "Prazer",
-    price: 179.90,
-    description: "Nosso plano mais popular",
+    name: "Pleasure",
+    price: 35.99,
+    description: "Our most popular plan",
     features: [
-      "2-3 produtos surpresa por mês",
-      "Produtos premium selecionados",
-      "Acesso a conteúdo exclusivo",
-      "15% desconto em compras avulsas",
-      "Presente de aniversário especial",
-      "Atendimento prioritário"
+      "2–3 surprise products per month",
+      "Selected premium products",
+      "Access to exclusive content",
+      "15% off individual purchases",
+      "Special birthday gift",
+      "Priority support"
     ],
     color: "from-purple-500 to-indigo-600",
     popular: true
   },
   {
     id: 'luxury',
-    name: "Luxo",
-    price: 299.90,
-    description: "Experiência completa e exclusiva",
+    name: "Luxury",
+    price: 59.99,
+    description: "Complete and exclusive experience",
     features: [
-      "3-5 produtos premium por mês",
-      "Marcas internacionais exclusivas",
-      "Consulta mensal com sexólogo",
-      "Frete grátis em todos pedidos",
-      "Kit de boas-vindas luxuoso",
-      "Acesso antecipado a lançamentos",
-      "Concierge pessoal"
+      "3–5 premium products per month",
+      "Exclusive international brands",
+      "Monthly sexologist consultation",
+      "Free shipping on all orders",
+      "Luxurious welcome kit",
+      "Early access to new arrivals",
+      "Personal concierge"
     ],
     color: "from-gray-800 to-gray-900",
     popular: false
@@ -57,23 +57,23 @@ const plans = [
 const benefits = [
   {
     icon: Gift,
-    title: "Surpresas Todo Mês",
-    description: "Produtos selecionados especialmente para você"
+    title: "Monthly Surprises",
+    description: "Products specially selected for you"
   },
   {
     icon: Shield,
-    title: "Embalagem Discreta",
-    description: "Ninguém saberá o que tem dentro"
+    title: "Discreet Packaging",
+    description: "No one will know what's inside"
   },
   {
     icon: Heart,
-    title: "Curadoria Personalizada",
-    description: "Baseada nas suas preferências"
+    title: "Personalized Curation",
+    description: "Based on your preferences"
   },
   {
     icon: Package,
-    title: "Cancele Quando Quiser",
-    description: "Sem fidelidade ou multas"
+    title: "Cancel Anytime",
+    description: "No commitment or fees"
   }
 ];
 
@@ -97,7 +97,7 @@ export default function Subscriptions() {
             animate={{ opacity: 1, y: 0 }}
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4"
           >
-            Clube de Assinatura
+            Subscription Club
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -105,7 +105,7 @@ export default function Subscriptions() {
             transition={{ delay: 0.1 }}
             className="text-lg text-white/90 max-w-2xl mx-auto"
           >
-            Receba produtos selecionados todo mês e descubra novas experiências
+            Receive curated products every month and discover new experiences
           </motion.p>
         </div>
       </div>
@@ -117,22 +117,22 @@ export default function Subscriptions() {
             <button
               onClick={() => setBillingCycle('monthly')}
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-                billingCycle === 'monthly' 
-                  ? 'bg-white shadow-sm text-gray-900' 
+                billingCycle === 'monthly'
+                  ? 'bg-white shadow-sm text-gray-900'
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              Mensal
+              Monthly
             </button>
             <button
               onClick={() => setBillingCycle('annual')}
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-                billingCycle === 'annual' 
-                  ? 'bg-white shadow-sm text-gray-900' 
+                billingCycle === 'annual'
+                  ? 'bg-white shadow-sm text-gray-900'
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              Anual (2 meses grátis)
+              Annual (2 months free)
             </button>
           </div>
         </div>
@@ -148,8 +148,8 @@ export default function Subscriptions() {
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -5 }}
               className={`relative rounded-3xl p-8 ${
-                plan.popular 
-                  ? 'bg-gradient-to-br from-purple-500 to-indigo-600 text-white shadow-2xl scale-105 z-10' 
+                plan.popular
+                  ? 'bg-gradient-to-br from-purple-500 to-indigo-600 text-white shadow-2xl scale-105 z-10'
                   : 'bg-white border border-gray-200 shadow-lg'
               }`}
             >
@@ -157,18 +157,16 @@ export default function Subscriptions() {
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                   <span className="inline-flex items-center gap-1 px-4 py-1.5 rounded-full bg-yellow-400 text-yellow-900 text-xs font-bold shadow-lg">
                     <Star className="w-3 h-3 fill-current" />
-                    MAIS POPULAR
+                    MOST POPULAR
                   </span>
                 </div>
               )}
 
               <div className="text-center mb-8">
                 <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4 ${
-                  plan.popular 
-                    ? 'bg-white/20' 
-                    : `bg-gradient-to-br ${plan.color}`
+                  plan.popular ? 'bg-white/20' : `bg-gradient-to-br ${plan.color}`
                 }`}>
-                  <Gift className={`w-8 h-8 ${plan.popular ? 'text-white' : 'text-white'}`} />
+                  <Gift className="w-8 h-8 text-white" />
                 </div>
                 <h3 className={`text-2xl font-bold mb-2 ${plan.popular ? 'text-white' : 'text-gray-900'}`}>
                   {plan.name}
@@ -180,17 +178,17 @@ export default function Subscriptions() {
 
               <div className="text-center mb-8">
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className={`text-sm ${plan.popular ? 'text-white/80' : 'text-gray-500'}`}>R$</span>
+                  <span className={`text-sm ${plan.popular ? 'text-white/80' : 'text-gray-500'}`}>$</span>
                   <span className={`text-5xl font-bold ${plan.popular ? 'text-white' : 'text-gray-900'}`}>
-                    {billingCycle === 'annual' 
-                      ? (plan.price * 0.83).toFixed(2).replace('.', ',')
-                      : plan.price.toFixed(2).replace('.', ',')}
+                    {billingCycle === 'annual'
+                      ? (plan.price * 0.83).toFixed(2)
+                      : plan.price.toFixed(2)}
                   </span>
-                  <span className={`text-sm ${plan.popular ? 'text-white/80' : 'text-gray-500'}`}>/mês</span>
+                  <span className={`text-sm ${plan.popular ? 'text-white/80' : 'text-gray-500'}`}>/mo</span>
                 </div>
                 {billingCycle === 'annual' && (
                   <p className={`text-sm mt-2 ${plan.popular ? 'text-white/70' : 'text-gray-400'}`}>
-                    Cobrado anualmente
+                    Billed annually
                   </p>
                 )}
               </div>
@@ -198,9 +196,7 @@ export default function Subscriptions() {
               <ul className="space-y-4 mb-8">
                 {plan.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <Check className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
-                      plan.popular ? 'text-white' : 'text-rose-500'
-                    }`} />
+                    <Check className={`w-5 h-5 flex-shrink-0 mt-0.5 ${plan.popular ? 'text-white' : 'text-rose-500'}`} />
                     <span className={`text-sm ${plan.popular ? 'text-white/90' : 'text-gray-600'}`}>
                       {feature}
                     </span>
@@ -208,14 +204,14 @@ export default function Subscriptions() {
                 ))}
               </ul>
 
-              <Button 
+              <Button
                 className={`w-full rounded-full py-6 ${
-                  plan.popular 
-                    ? 'bg-white text-purple-600 hover:bg-gray-100' 
+                  plan.popular
+                    ? 'bg-white text-purple-600 hover:bg-gray-100'
                     : 'bg-gradient-to-r from-rose-500 to-purple-500 text-white hover:from-rose-600 hover:to-purple-600'
                 }`}
               >
-                Assinar Agora
+                Subscribe Now
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </motion.div>
@@ -225,7 +221,7 @@ export default function Subscriptions() {
         {/* Benefits */}
         <div className="bg-gradient-to-br from-rose-50 to-purple-50 rounded-3xl p-8 lg:p-12">
           <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 text-center mb-12">
-            Por Que Assinar?
+            Why Subscribe?
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (

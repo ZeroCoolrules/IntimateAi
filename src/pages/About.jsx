@@ -5,31 +5,31 @@ import { Heart, Shield, Sparkles, Users, Award, Truck } from 'lucide-react';
 const values = [
   {
     icon: Heart,
-    title: "Bem-estar em Primeiro Lugar",
-    description: "Acreditamos que prazer e saúde íntima são parte essencial de uma vida plena e feliz."
+    title: "Wellness First",
+    description: "We believe that pleasure and intimate health are an essential part of a full and happy life."
   },
   {
     icon: Shield,
-    title: "Privacidade Absoluta",
-    description: "Sua privacidade é sagrada. Implementamos os mais altos padrões de segurança e discrição."
+    title: "Absolute Privacy",
+    description: "Your privacy is sacred. We implement the highest standards of security and discretion."
   },
   {
     icon: Sparkles,
-    title: "Qualidade Premium",
-    description: "Selecionamos apenas produtos certificados, seguros e de marcas reconhecidas mundialmente."
+    title: "Premium Quality",
+    description: "We select only certified, safe products from globally recognized brands."
   },
   {
     icon: Users,
-    title: "Inclusão e Respeito",
-    description: "Celebramos a diversidade e oferecemos produtos para todas as pessoas e preferências."
+    title: "Inclusion & Respect",
+    description: "We celebrate diversity and offer products for all people and preferences."
   }
 ];
 
 const stats = [
-  { number: "50K+", label: "Clientes Satisfeitos" },
-  { number: "500+", label: "Produtos Premium" },
-  { number: "4.9", label: "Avaliação Média" },
-  { number: "99%", label: "Entregas no Prazo" }
+  { number: "50K+", label: "Satisfied Customers" },
+  { number: "4,600+", label: "Premium Products" },
+  { number: "4.9", label: "Average Rating" },
+  { number: "99%", label: "On-Time Delivery" }
 ];
 
 export default function About() {
@@ -43,7 +43,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
           >
-            Sobre a IntimacyAI
+            About IntimacyAI
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ export default function About() {
             transition={{ delay: 0.1 }}
             className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto"
           >
-            Revolucionando o bem-estar íntimo através de tecnologia, qualidade e respeito
+            Revolutionizing intimate wellness through technology, quality, and respect
           </motion.p>
         </div>
       </div>
@@ -66,30 +66,30 @@ export default function About() {
         >
           <div>
             <span className="inline-block px-4 py-2 rounded-full bg-rose-50 text-rose-600 text-sm font-medium mb-4">
-              Nossa História
+              Our Story
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-              Nascemos Para{' '}
+              Born to{' '}
               <span className="bg-gradient-to-r from-rose-500 to-purple-500 bg-clip-text text-transparent">
-                Transformar
+                Transform
               </span>
             </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                A IntimacyAI nasceu da percepção de que o mercado de bem-estar íntimo precisava de uma abordagem mais moderna, respeitosa e tecnológica.
+                IntimacyAI was born from the realization that the intimate wellness market needed a more modern, respectful, and technology-driven approach.
               </p>
               <p>
-                Combinamos inteligência artificial avançada com uma curadoria cuidadosa de produtos para oferecer uma experiência personalizada e discreta para cada cliente.
+                We combine advanced artificial intelligence with a carefully curated product selection to deliver a personalized and discreet experience for every customer.
               </p>
               <p>
-                Nossa missão é quebrar tabus e promover uma relação saudável com o prazer e a intimidade, sempre com respeito, segurança e qualidade.
+                Our mission is to break taboos and promote a healthy relationship with pleasure and intimacy — always with respect, safety, and quality.
               </p>
             </div>
           </div>
           <div className="relative">
             <img
               src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&h=500&fit=crop"
-              alt="Nossa equipe"
+              alt="Our team"
               className="rounded-3xl shadow-2xl"
             />
             <motion.div
@@ -103,8 +103,8 @@ export default function About() {
                   <Award className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <p className="font-bold text-gray-900">Desde 2020</p>
-                  <p className="text-sm text-gray-500">Transformando vidas</p>
+                  <p className="font-bold text-gray-900">Since 2020</p>
+                  <p className="text-sm text-gray-500">Transforming lives</p>
                 </div>
               </div>
             </motion.div>
@@ -115,12 +115,12 @@ export default function About() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-2 rounded-full bg-purple-50 text-purple-600 text-sm font-medium mb-4">
-              Nossos Valores
+              Our Values
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-              O Que Nos{' '}
+              What{' '}
               <span className="bg-gradient-to-r from-rose-500 to-purple-500 bg-clip-text text-transparent">
-                Define
+                Defines Us
               </span>
             </h2>
           </div>
@@ -182,10 +182,10 @@ export default function About() {
               <Truck className="w-8 h-8 text-rose-600" />
             </div>
             <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-              Nosso Compromisso Com Você
+              Our Commitment to You
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Cada produto é enviado com o máximo cuidado e discrição. Trabalhamos incansavelmente para garantir que sua experiência conosco seja sempre positiva, desde a escolha do produto até a entrega na sua porta.
+              Every product is shipped with the utmost care and discretion. We work tirelessly to ensure your experience with us is always positive — from product selection to delivery at your door.
             </p>
           </motion.div>
         </div>

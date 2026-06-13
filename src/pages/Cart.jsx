@@ -9,15 +9,15 @@ import { Input } from '@/components/ui/input';
 const initialCartItems = [
   {
     id: 1,
-    name: "Vibrador Premium Silicone",
-    price: 299.90,
+    name: "Premium Silicone Vibrator",
+    price: 59.99,
     quantity: 1,
     image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=200&h=200&fit=crop"
   },
   {
     id: 2,
-    name: "Óleo de Massagem Premium",
-    price: 89.90,
+    name: "Premium Massage Oil",
+    price: 17.99,
     quantity: 2,
     image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=200&h=200&fit=crop"
   }
@@ -50,7 +50,7 @@ export default function Cart() {
 
   const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const discount = appliedCoupon ? subtotal * (appliedCoupon.discount / 100) : 0;
-  const shipping = subtotal > 200 ? 0 : 19.90;
+  const shipping = subtotal > 50 ? 0 : 5.99;
   const total = subtotal - discount + shipping;
 
   return (
@@ -64,7 +64,7 @@ export default function Cart() {
           <Link to={createPageUrl('Shop')}>
             <Button variant="ghost" className="rounded-full">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Continuar Comprando
+              Continue Shopping
             </Button>
           </Link>
         </motion.div>
@@ -79,9 +79,9 @@ export default function Cart() {
             >
               <div className="flex items-center gap-3 mb-6">
                 <ShoppingBag className="w-6 h-6 text-rose-500" />
-                <h1 className="text-2xl font-bold text-gray-900">Seu Carrinho</h1>
+                <h1 className="text-2xl font-bold text-gray-900">Your Cart</h1>
                 <span className="ml-auto px-3 py-1 rounded-full bg-rose-100 text-rose-600 text-sm font-medium">
-                  {cartItems.length} {cartItems.length === 1 ? 'item' : 'itens'}
+                  {cartItems.length} {cartItems.length === 1 ? 'item' : 'items'}
                 </span>
               </div>
 
@@ -105,9 +105,8 @@ export default function Cart() {
                         <div className="flex-1">
                           <h3 className="font-semibold text-gray-900 mb-1">{item.name}</h3>
                           <p className="text-rose-600 font-bold">
-                            R$ {item.price.toFixed(2).replace('.', ',')}
+                            ${item.price.toFixed(2)}
                           </p>
-                          
                           <div className="flex items-center justify-between mt-3">
                             <div className="flex items-center gap-2">
                               <button
@@ -139,10 +138,10 @@ export default function Cart() {
               ) : (
                 <div className="text-center py-12">
                   <ShoppingBag className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-                  <p className="text-gray-500 mb-6">Seu carrinho está vazio</p>
+                  <p className="text-gray-500 mb-6">Your cart is empty</p>
                   <Link to={createPageUrl('Shop')}>
                     <Button className="bg-gradient-to-r from-rose-500 to-purple-500 rounded-full">
-                      Explorar Produtos
+                      Explore Products
                     </Button>
                   </Link>
                 </div>
@@ -158,19 +157,19 @@ export default function Cart() {
               transition={{ delay: 0.1 }}
               className="bg-white rounded-3xl p-6 shadow-lg sticky top-24"
             >
-              <h2 className="text-xl font-bold text-gray-900 mb-6">Resumo do Pedido</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-6">Order Summary</h2>
 
               {/* Coupon */}
               <div className="mb-6">
                 <div className="flex gap-2">
                   <Input
-                    placeholder="Código promocional"
+                    placeholder="Promo code"
                     value={couponCode}
                     onChange={(e) => setCouponCode(e.target.value)}
                     className="rounded-full"
                   />
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     onClick={applyCoupon}
                     className="rounded-full"
                     disabled={!couponCode}
@@ -181,7 +180,7 @@ export default function Cart() {
                 {appliedCoupon && (
                   <p className="text-green-600 text-sm mt-2 flex items-center gap-1">
                     <Tag className="w-3 h-3" />
-                    Cupom {appliedCoupon.code} aplicado!
+                    Coupon {appliedCoupon.code} applied!
                   </p>
                 )}
               </div>
@@ -190,34 +189,34 @@ export default function Cart() {
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between text-gray-600">
                   <span>Subtotal</span>
-                  <span>R$ {subtotal.toFixed(2).replace('.', ',')}</span>
+                  <span>${subtotal.toFixed(2)}</span>
                 </div>
                 {appliedCoupon && (
                   <div className="flex justify-between text-green-600">
-                    <span>Desconto ({appliedCoupon.discount}%)</span>
-                    <span>- R$ {discount.toFixed(2).replace('.', ',')}</span>
+                    <span>Discount ({appliedCoupon.discount}%)</span>
+                    <span>- ${discount.toFixed(2)}</span>
                   </div>
                 )}
                 <div className="flex justify-between text-gray-600">
-                  <span>Frete</span>
+                  <span>Shipping</span>
                   <span className={shipping === 0 ? 'text-green-600' : ''}>
-                    {shipping === 0 ? 'Grátis' : `R$ ${shipping.toFixed(2).replace('.', ',')}`}
+                    {shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`}
                   </span>
                 </div>
                 <div className="border-t pt-3">
                   <div className="flex justify-between text-lg font-bold text-gray-900">
                     <span>Total</span>
-                    <span>R$ {total.toFixed(2).replace('.', ',')}</span>
+                    <span>${total.toFixed(2)}</span>
                   </div>
                 </div>
               </div>
 
               {/* Checkout Button */}
-              <Button 
+              <Button
                 className="w-full bg-gradient-to-r from-rose-500 to-purple-500 hover:from-rose-600 hover:to-purple-600 rounded-full py-6"
                 disabled={cartItems.length === 0}
               >
-                Finalizar Compra
+                Checkout
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
 
@@ -225,17 +224,17 @@ export default function Cart() {
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-3 text-sm text-gray-600">
                   <ShieldCheck className="w-5 h-5 text-green-600" />
-                  <span>Pagamento 100% seguro</span>
+                  <span>100% secure payment</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-gray-600">
                   <Truck className="w-5 h-5 text-rose-500" />
-                  <span>Embalagem discreta garantida</span>
+                  <span>Discreet packaging guaranteed</span>
                 </div>
               </div>
 
               {shipping > 0 && (
                 <p className="text-center text-sm text-gray-500 mt-4">
-                  Frete grátis para compras acima de R$ 200,00
+                  Free shipping on orders over $50
                 </p>
               )}
             </motion.div>

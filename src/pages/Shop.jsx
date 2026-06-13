@@ -186,11 +186,6 @@ export default function Shop() {
                             ${parseFloat(product.msrp).toFixed(2)}
                           </span>
                         ) : null}
-                        {product.wholesale_price && product.msrp && parseFloat(product.wholesale_price) < parseFloat(product.msrp) && (
-                          <span className="text-xs text-gray-400 line-through">
-                            Wholesale: ${parseFloat(product.wholesale_price).toFixed(2)}
-                          </span>
-                        )}
                       </div>
                       {product.current_inventory !== undefined && (
                         <p className="text-xs text-gray-400 mt-0.5">{product.current_inventory} in stock</p>

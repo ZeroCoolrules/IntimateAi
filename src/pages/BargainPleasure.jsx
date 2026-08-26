@@ -15,9 +15,8 @@ export default function BargainPleasure() {
   const PAGE_SIZE = 24;
 
   useEffect(() => {
-    base44.entities.Product.list('-msrp', 500).then(data => {
-      const sale = data.filter(p => p.msrp && parseFloat(p.msrp) <= 29.99);
-      setProducts(sale);
+    base44.entities.Product.filter({ msrp: { $lte: 29.99 } }, 'msrp', 5000).then(data => {
+      setProducts(data);
       setLoading(false);
     });
   }, []);

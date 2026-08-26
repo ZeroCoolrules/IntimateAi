@@ -33,7 +33,7 @@ const colorFor = (name) => PALETTE[(name || "").length % PALETTE.length];
 // Paginate through ALL products (the SDK caps each call, so we page by
 // created_date cursor and dedupe to survive timestamp collisions from bulk imports).
 const loadAllProducts = async (onProgress) => {
-  const PAGE = 500;
+  const PAGE = 5000;
   const all = [];
   const seen = new Set();
   let lastDate = null;

@@ -29,7 +29,7 @@ export default function Shop() {
 
   useEffect(() => {
     setLoading(true);
-    base44.entities.Product.list('-current_inventory', 500).then(data => {
+    base44.entities.Product.list('-current_inventory', 5000).then(data => {
       setProducts(data);
       const cats = [...new Set(data.map(p => p.category).filter(Boolean))].sort();
       setCategories(cats);

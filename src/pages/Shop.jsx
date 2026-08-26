@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Filter, ShoppingBag, Heart, X, ChevronDown } from 'lucide-react';
+import { Search, Filter, ShoppingBag, Heart, X, ChevronDown, Building2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
@@ -15,6 +15,7 @@ export default function Shop() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [selectedManufacturer, setSelectedManufacturer] = useState('');
   const [page, setPage] = useState(1);
   const PAGE_SIZE = 24;
 
@@ -22,6 +23,8 @@ export default function Shop() {
     const params = new URLSearchParams(window.location.search);
     const cat = params.get('category');
     if (cat) setSelectedCategory(cat);
+    const mfr = params.get('manufacturer');
+    if (mfr) setSelectedManufacturer(mfr);
   }, []);
 
   useEffect(() => {
@@ -42,7 +45,8 @@ export default function Shop() {
     .filter(p => {
       const matchesSearch = !searchQuery || p.title?.toLowerCase().includes(searchQuery.toLowerCase()) || p.manufacturer?.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesCategory = selectedCategory === 'all' || p.category === selectedCategory;
-      return matchesSearch && matchesCategory;
+      const matchesManufacturer = !selectedManufacturer || p.manufacturer === selectedManufacturer;
+      return matchesSearch && matchesCategory && matchesManufacturer;
     })
     .sort((a, b) => {
       if (sortBy === 'price-asc') return (a.msrp || 0) - (b.msrp || 0);
@@ -111,6 +115,17 @@ export default function Shop() {
           </Select>
         </div>
 
+        {selectedManufacturer && (
+          <div className="flex items-center gap-2 mb-6">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-rose-50 text-rose-700 text-sm">
+              <Building2 className="w-3.5 h-3.5" />
+              Brand: {selectedManufacturer}
+              <button onClick={() => { setSelectedManufacturer(''); setPage(1); }} className="hover:text-rose-900">
+                <X className="w-3.5 h-3.5" />
+              </button>
+            </span>
+          </div>
+        )}
         <p className="text-gray-500 mb-6 text-sm">
           {loading ? 'Loading...' : `${filteredProducts.length} product${filteredProducts.length !== 1 ? 's' : ''} found`}
         </p>
@@ -211,7 +226,7 @@ export default function Shop() {
             {filteredProducts.length === 0 && (
               <div className="text-center py-16">
                 <p className="text-gray-500 text-lg mb-4">No products found</p>
-                <Button variant="outline" onClick={() => { setSearchQuery(''); setSelectedCategory('all'); setPage(1); }}>
+                <Button variant="outline" onClick={() => { setSearchQuery(''); setSelectedCategory('all'); setSelectedManufacturer(''); setPage(1); }}>
                   Clear filters
                 </Button>
               </div>

@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, X, ShoppingBag, User, Heart, Search, 
   Bot, Home, Package, BookOpen, Gift, Mail, Info,
-  ChevronDown, Sparkles, Shield, Instagram, Facebook, Twitter, Tag
+  ChevronDown, Sparkles, Shield, Instagram, Facebook, Twitter, Tag, Plug
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -18,6 +18,7 @@ const navigation = [
   { name: 'Wellness', page: 'Wellness', icon: BookOpen },
   { name: 'Subscriptions', page: 'Subscriptions', icon: Gift },
   { name: '🔥 Bargain Pleasure', page: 'BargainPleasure', icon: Tag },
+  { name: 'Connect AI', page: 'Connect', icon: Plug },
 ];
 
 const footerLinks = {

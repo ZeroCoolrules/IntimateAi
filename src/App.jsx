@@ -9,6 +9,7 @@ import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import CupidMatch from './pages/CupidMatch';
 import OAuthConsent from './pages/OAuthConsent';
+import Connect from './pages/Connect';
 
 const { Pages, Layout, mainPage } = pagesConfig;
 const mainPageKey = mainPage ?? Object.keys(Pages)[0];
@@ -60,6 +61,11 @@ const AuthenticatedApp = () => {
       <Route path="/CupidMatch" element={
         <LayoutWrapper currentPageName="CupidMatch">
           <CupidMatch />
+        </LayoutWrapper>
+      } />
+      <Route path="/Connect" element={
+        <LayoutWrapper currentPageName="Connect">
+          <Connect />
         </LayoutWrapper>
       } />
       {Object.entries(Pages).map(([path, Page]) => (

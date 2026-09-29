@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Heart, Flame, Sparkles, Moon, Sun, Package, Tag, Building2 } from 'lucide-react';
 import { base44 } from '@/api/base44Client';
+import CategorySideMenu from '@/components/collections/CategorySideMenu';
 
 const collectionMeta = {
   "Vibrators": { icon: Sparkles, color: "from-rose-500 to-pink-600", description: "Powerful vibrating pleasure devices" },
@@ -64,6 +65,26 @@ const buildGroups = (products, field) => {
   return Object.values(groups).sort((a, b) => b.count - a.count);
 };
 
+const buildHierarchy = (products, parentField, childField) => {
+  const map = {};
+  products.forEach(p => {
+    const pKey = p[parentField];
+    if (!pKey) return;
+    if (!map[pKey]) map[pKey] = { name: pKey, count: 0, children: {} };
+    map[pKey].count++;
+    const cKey = p[childField];
+    if (cKey) {
+      if (!map[pKey].children[cKey]) map[pKey].children[cKey] = { name: cKey, count: 0 };
+      map[pKey].children[cKey].count++;
+    }
+  });
+  return Object.values(map).map(n => ({
+    name: n.name,
+    count: n.count,
+    children: Object.values(n.children).sort((a, b) => b.count - a.count),
+  })).sort((a, b) => b.count - a.count);
+};
+
 export default function Collections() {
   const [mode, setMode] = useState('category');
   const [products, setProducts] = useState([]);
@@ -79,6 +100,9 @@ export default function Collections() {
 
   const total = products.length;
   const groups = mode === 'category' ? buildGroups(products, 'category') : buildGroups(products, 'manufacturer');
+  const hierarchy = mode === 'category'
+    ? buildHierarchy(products, 'category', 'manufacturer')
+    : buildHierarchy(products, 'manufacturer', 'category');
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-rose-50/30 to-white">
@@ -103,8 +127,23 @@ export default function Collections() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Organization toggle */}
-        <div className="flex justify-center mb-10">
+        <div className="flex flex-col lg:flex-row gap-8">
+          <aside className="lg:w-72 shrink-0 order-2 lg:order-1">
+            <div className="lg:sticky lg:top-24">
+              {!loading && (
+                <CategorySideMenu
+                  key={mode}
+                  hierarchy={hierarchy}
+                  parentParam={mode === 'category' ? 'category' : 'manufacturer'}
+                  childParam={mode === 'category' ? 'manufacturer' : 'category'}
+                  parentLabel={mode === 'category' ? 'Category' : 'Brand'}
+                />
+              )}
+            </div>
+          </aside>
+          <div className="flex-1 min-w-0 order-1 lg:order-2">
+            {/* Organization toggle */}
+            <div className="flex justify-center mb-10">
           <div className="inline-flex bg-white rounded-full shadow-sm border border-gray-100 p-1">
             <button
               onClick={() => setMode('category')}
@@ -194,6 +233,8 @@ export default function Collections() {
             </div>
           </>
         )}
+          </div>
+        </div>
       </div>
     </div>
   );

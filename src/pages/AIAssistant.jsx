@@ -110,7 +110,7 @@ export default function AIAssistant() {
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
             <span className="bg-gradient-to-r from-rose-500 to-purple-500 bg-clip-text text-transparent">
-              IntimacyAI
+              Cupid's Adult Toys
             </span>{' '}
             Assistant
           </h1>

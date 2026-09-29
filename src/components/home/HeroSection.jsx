@@ -68,7 +68,7 @@ export default function HeroSection() {
               transition={{ delay: 0.4 }}
               className="text-lg sm:text-xl text-gray-600 mb-10 max-w-xl mx-auto lg:mx-0"
             >
-              IntimacyAI combines premium intimate wellness products with artificial intelligence to find exactly what you need.
+              Cupid's Adult Toys combines premium intimate wellness products with artificial intelligence to find exactly what you need.
             </motion.p>
 
             <motion.div
@@ -147,7 +147,7 @@ export default function HeroSection() {
                     <Bot className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">IntimacyAI Assistant</h3>
+                    <h3 className="font-semibold text-gray-900">Cupid's Adult Toys Assistant</h3>
                     <p className="text-sm text-gray-500">AI-powered personalized recommendations</p>
                   </div>
                 </div>

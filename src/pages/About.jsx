@@ -43,7 +43,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
           >
-            About IntimacyAI
+            About Cupid's Adult Toys
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -76,7 +76,7 @@ export default function About() {
             </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                IntimacyAI was born from the realization that the intimate wellness market needed a more modern, respectful, and technology-driven approach.
+                Cupid's Adult Toys was born from the realization that the intimate wellness market needed a more modern, respectful, and technology-driven approach.
               </p>
               <p>
                 We combine advanced artificial intelligence with a carefully curated product selection to deliver a personalized and discreet experience for every customer.

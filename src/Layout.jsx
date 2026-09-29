@@ -12,6 +12,7 @@ import { Button } from '@/components/ui/button';
 const navigation = [
   { name: 'Home', page: 'Home', icon: Home },
   { name: 'Shop', page: 'Shop', icon: Package },
+  { name: 'Cupid Match', page: 'CupidMatch', icon: Heart },
   { name: 'AI Assistant', page: 'AIAssistant', icon: Bot },
   { name: 'Collections', page: 'Collections', icon: Sparkles },
   { name: 'Wellness', page: 'Wellness', icon: BookOpen },
@@ -71,7 +72,7 @@ export default function Layout({ children, currentPageName }) {
                 <Heart className="w-5 h-5 text-white" fill="white" />
               </div>
               <span className="text-xl font-bold text-gray-900">
-                IntimacyAI
+                Cupid's Adult Toys
               </span>
             </Link>
 
@@ -155,7 +156,7 @@ export default function Layout({ children, currentPageName }) {
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-500 to-purple-500 flex items-center justify-center">
                       <Heart className="w-5 h-5 text-white" fill="white" />
                     </div>
-                    <span className="text-xl font-bold text-gray-900">IntimacyAI</span>
+                    <span className="text-xl font-bold text-gray-900">Cupid's Adult Toys</span>
                   </div>
                   <Button
                     variant="ghost"
@@ -228,7 +229,7 @@ export default function Layout({ children, currentPageName }) {
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-500 to-purple-500 flex items-center justify-center">
                   <Heart className="w-5 h-5 text-white" fill="white" />
                 </div>
-                <span className="text-xl font-bold">IntimacyAI</span>
+                <span className="text-xl font-bold">Cupid's Adult Toys</span>
               </div>
               <p className="text-gray-400 text-sm mb-4">
                 Revolutionizing intimate wellness through technology, quality, and respect.
@@ -318,7 +319,7 @@ export default function Layout({ children, currentPageName }) {
 
           {/* Copyright */}
           <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-            <p>© 2024 IntimacyAI. All rights reserved.</p>
+            <p>© 2024 Cupid's Adult Toys. All rights reserved.</p>
             <p className="mt-2">
               Must be 18+ years old to access this site. Products for adults only.
             </p>

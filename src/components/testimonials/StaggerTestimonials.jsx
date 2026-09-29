@@ -7,7 +7,7 @@ const SQRT_5000 = Math.sqrt(5000);
 const testimonials = [
   {
     tempId: 0,
-    testimonial: "IntimacyAI completely changed my relationship with myself. I found products I never imagined.",
+    testimonial: "Cupid's Adult Toys completely changed my relationship with myself. I found products I never imagined.",
     by: "Marina, 28",
     imgSrc: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face"
   },
